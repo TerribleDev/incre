@@ -1,0 +1,22 @@
+[package]
+name = "incre"
+version = "0.1.0"
+authors = ["tparnell <tommy@terribledev.io>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "incre"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.8.1"
+
+[dependencies]
+neon = "0.8.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+walkdir = "2"
+metrohash = "1.0"
